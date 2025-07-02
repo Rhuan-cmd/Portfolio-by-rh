@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="Imgs/Logo_iniciar.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style_Geral.css">
+    <link rel="stylesheet" href="TaskBar/style_TaskBar.css">
+    <link rel="stylesheet" href="NavBar/style_NavBar.css">
+    <link rel="stylesheet" href="Secoes/style_Secao.css">
+    <link rel="stylesheet" href="App-Gerenciador/style_Gerenciador.css">
+    <link rel="stylesheet" href="Efeitos/style_X_janela.css">
+    <link rel="stylesheet" href="App-BlocoNotas/style_Bloco.css">
+
+    <script src="TaskBar/script_TaskBar.js" defer></script>
+    <script src="NavBar/script_Navbar.js" defer></script>
+    <script src="Secoes/script_Secao.js" defer></script>
+    <script src="App-Gerenciador/script_Gerenciador.js" defer></script>
+    <script src="script_Geral.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="Efeitos/script_X_janela.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" defer></script>
+    <script src="Efeitos/script_background_animation.js" defer></script>
+    <script src="App-BlocoNotas/script_Bloco.js" defer></script>
+
+    <title>Portfólio</title>
+</head>
+<body>
+    <!--Fundo Animado-->
+    <div id="Efeito-Fundo"></div>
+
+    <!--Cursor-->
+    <div id="Cursor" class="cursor-anim"></div>
+
+    <!--NavBar-->
+    <nav id="NavBar" class="anim-abrir-navbar Janelas">
+        <div id="Barra-Janela">
+            <img src="Imgs/Logo_CMD.png" alt="Imagem Prompt de Comando" id="Icone-Janela" draggable="false">
+            <span id="Nome-Text">Prompt de Comando</span>
+            <div class="x-conteiner">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+            </div>
+        </div>
+
+        <div id="Barra-Nav">
+            <span id="Mensagem-terminal">C:\User\NavBar.exe></span>
+            <ul id="Lista-Nav">
+                <li><a href="#Home" class="TextoNav">[Home]</a></li>
+                <li><a href="#Sobre" class="TextoNav">[Sobre]</a></li>
+                <li><a href="#Projetos" class="TextoNav">[Projetos]</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Gerenciador de Arquivos-->
+    <div id="Gerenciador-Projetos" class="anim-fechar-gerenciador Janelas">
+        <div id="Barra-Janela-Project">
+            <div id="Top-Bar-Project">
+                <img src="Imgs/Logo_Gerenciador.png" alt="Imagem Gerenciador de Arquivos" id="Icone-Janela-Project" draggable="false">
+                <span id="Nome-Text-Project">Gerenciador de Projetos</span>
+                <div class="x-conteiner">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                </div>
+            </div>
+
+            <div id="Bottom-Bar-Project">
+                <img src="Imgs/Setas_Documento.png" alt="Setas" id="Setas-Project-Bar" draggable="false">
+                <div id="Caminho-Project">
+                    <img src="Imgs/Icon_Documento.png" alt="Documento" id="Icon-Documento" draggable="false">
+                    <span id="url-caminho">> Este Computador > Documentos > Projetos ></span>
+                    <img src="Imgs/Seta_para_baixo.png" alt="Seta Para Baixo" id="Seta-p-Baixo" draggable="false">
+                </div>
+                <img src="Imgs/Reload_Image.png" alt="reload" id="icon-reload-project" draggable="false">
+            </div>
+
+        </div>
+
+        <div id="Conteiner-Project">
+            <div class="pastas-projeto">
+                <img src="Imgs/Icon_Pasta.png" alt="Icone de Pasta" class="Image-Pasta-Project" draggable="false">
+                <span class="nome-documento">Jogo de Dama Feito em Java</span>
+            </div>
+            <div class="pastas-projeto">
+                <img src="Imgs/Icon_Pasta.png" alt="Icone de Pasta" class="Image-Pasta-Project" draggable="false">
+                <span class="nome-documento">Nome do Projeto</span>
+            </div>
+            <div class="pastas-projeto">
+                <img src="Imgs/Icon_Pasta.png" alt="Icone de Pasta" class="Image-Pasta-Project" draggable="false">
+                <span class="nome-documento">Nome do Projeto</span>
+            </div>
+            <div class="pastas-projeto">
+                <img src="Imgs/Icon_Pasta.png" alt="Icone de Pasta" class="Image-Pasta-Project" draggable="false">
+                <span class="nome-documento">Nome do Projeto</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="Bloco-Notas" class="anim-fechar-notas Janelas">
+        <div id="Bar-Top-Bloco">
+            <img src="Imgs/Logo_Notas.png" alt="Papel" id="Icone-Bloco-Notas" draggable="false">
+            <span id="Title-Bloco">README - Bloco de Notas</span>
+            <div class="x-conteiner">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+            </div>
+        </div>
+
+        <div id="Conteiner-Bloco">
+            <p id="Texto-Bloco"><span class="Title-Readme"># 🖥️ Portfólio Interativo<br><br></span>
+            Este é um portfólio interativo com visual inspirado em sistemas operacionais. Ele foi criado para apresentar projetos de forma criativa, simulando a experiência de um ambiente desktop.<br><br>
+            A interface conta com uma **taskbar** na parte inferior da tela, onde você pode abrir "aplicativos" que fazem parte do site — como a **navbar**, responsável pela navegação entre as seções.<br><br>
+            <span class="Title-Readme">## ⬇️ Como usar<br><br></span>
+            - Clique na **seta inferior** para abrir a taskbar.<br>
+            - Na taskbar, clique nos ícones para:<br>
+            - 📂 Acessar os projetos<br>
+            - 📁 Abrir a navbar<br>
+            - 📁 Fazer pesquisas e navegar pelo site<br><br>
+            ⚠️ Este site foi pensado para telas maiores e funciona melhor em dispositivos desktop.<br><br>
+            Sinta-se à vontade para explorar cada parte e conhecer os projetos disponíveis. 🚀</p>
+        </div>
+    </div>
+
+    <!--TaskBar-->
+    <div id="Taskbar">
+        <button id="Seta_Open" onclick="abrir_fechar_Taksbar()">
+            <img src="Imgs/Seta_Open_TaskBar.png" alt="Seta para abrir Taskbar" draggable="false">
+        </button>
+        <div id="Taskbar-menu">
+            <img src="Imgs/Logo_iniciar.png" alt="Logo R" id="Logo_Iniciar" draggable="false">
+            <img src="Imgs/Icone_Pesquisa.png" alt="Icone de Pesquisa" id="Icone-Pesquisa" draggable="false">
+            <input type="text" placeholder="Pesquisar" id="Barra-de-Pesquisa">
+            <div id="Janela-Pesquisa">
+                <div id="List-Config-Desl">
+                    <img src="Imgs/Icon_Menu.png" alt="" draggable="false">
+                    <img src="Imgs/Icon_Settings.png" alt="" draggable="false">
+                    <img src="Imgs/Icon_Power.png" alt="" draggable="false">
+                </div>
+                <div id="List-Aplicativos">
+                    <ul id="sherlock-holmes">
+                        <li class="button-apps"><img src="Imgs/Logo_CMD.png" alt="" draggable="false"> <span>Prompt de Comando</span></li>
+                        <li class="button-apps"><img src="Imgs/Logo_Gerenciador.png" alt="" draggable="false"><span>Gerenciador de Projetos</span></li>
+                        <li class="button-apps"><img src="Imgs/Logo_Notas.png" alt="" draggable="false"><span>Bloco de Notas</span></li>
+                    </ul>
+                    <ul id="eu-amo-ela"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="Taskbar-apps">
+            <div class="Icones" id="App-cmd">
+                <img src="Imgs/Logo_CMD.png" alt="Imagem Prompt de Comando" draggable="false">
+            </div>
+            <div class="Icones" id="App-Gerenciador">
+                <img src="Imgs/Logo_Gerenciador.png" alt="Imagem Gerenciador de Arquivos" draggable="false">
+            </div>
+            <div class="Icones" id="App-Notas">
+                <img src="Imgs/Logo_Notas.png" alt="Imagem Blocos de Notas" draggable="false">
+            </div>
+        </div>
+        <div id="Taskbar-status">
+            <span id="Clima" style="font-size: 20px;">⛅31°C</span>
+            <img src="Imgs/Logo_Bateria.png" alt="Bateria" id="Bateria" draggable="false">
+            <img src="Imgs/Logo_Wifi.png" alt="Wifi" id="Wifi" draggable="false">
+            <img src="Imgs/Logo_Som.png" alt="Som" id="Som" draggable="false">
+            <span id="Hora-Data">14:44<br>19/06/2025</span>
+        </div>
+    </div>
+
+    <!--Seções-->
+    <section id="Home">
+        <h1 id="Frese-efeito"><span id="Texto-Dinamico"></span><span id="barra-deitada"></span></h1>
+    </section>
+
+    <section id="Sobre" class="Pesquisavel">
+        <div id="Caixa-Sobre" class="Elements-Entry">
+            <p class="Texto-Sobre">Oi! Meu nome é Rhuan eu tenho 16 anos e eu sou um desenvolvedor
+                apaixonado por
+                resolver problemas com código. Mexo com Java
+                (minha linguagem favorita), mas também desenrolo com
+                HTML, CSS, JavaScript e PHP pra desenvolver sites, e outras linguagens se necessario.
+                Além disso, nas horas vagas, gosto de brincar com criação de
+                jogos. Sou meio full stack, faço de tudo um pouco,
+                mas o que eu curto mesmo é o back-end e a criação de softwares.
+                Gosto de projetos criativos, bem pensados e que tenham um bom
+                desempenho. Eu acredito que errar faz parte. Não tem essa de
+                “e se não der certo?” — tenta, erra, aprende e depois volta melhor.
+                Se o código rodou de primeira, desconfia. 😅</p>
+            
+            <div id="Conteiner-Coffee">
+                <img src="Imgs/Coffee Smoke.png" alt="Fumaça do Café" id="Smoke" draggable="false">
+                <img src="Imgs/Coffee Base.png" alt="Xícara" draggable="false">
+            </div>
+        </div>
+    </section>
+
+    <section id="Projetos" class="Pesquisavel">
+        <div id="Caixa-Projetos" class="Elements-Entry">
+            <p class="Texto-Projetos">Curto transformar ideias em código, e aqui estão algumas das criações que surgiram dessa mistura de café, lógica e curiosidade. ☕💻</p>
+        </div>
+        <div id="Conteiner-Image-Project" class="Elements-Entry">
+            <img src="Imgs/Seta.png" alt="Seta" id="Image-Seta-Project" draggable="false">
+            <img src="Imgs/Logo_Gerenciador.png" alt="Pasta" id="Image-Pasta-Project" draggable="false">
+        </div>
+    </section>
+
+    <footer id="Rodape">
+        <p>© <span id="Ano-Rodape"></span> Rhuan Gabriel. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

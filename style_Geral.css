@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    cursor: none;
+    background-color: #1a1a1a;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#Cursor{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0;
+}
+
+@keyframes anim_normal_mouse{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 192px 0;
+    }
+}
+
+@keyframes anim_select_mouse{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 224px 0;
+    }
+}
+
+.cursor-anim{
+    background: url(Imgs/CursorFrames/Cursor_Anim.png);
+    transform: translate(-10px, -10px);
+    animation: anim_normal_mouse 0.5s steps(6) infinite;
+}
+
+.cursor-select-anim{
+    background: url(Imgs/CursorFrames/Cursor_Select_Anim.png);
+    transform: translate(-10px, -10px);
+    animation: anim_select_mouse 0.5s steps(7) infinite;
+}
+
+#Efeito-Fundo{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#Rodape{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
