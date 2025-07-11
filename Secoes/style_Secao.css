@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+section{
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+#Home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Frese-efeito{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #00ffe7;
+  text-shadow:
+    0 0 5px #00ffe7,
+    0 0 10px #00ffe7,
+    0 0 20px #00ffe7,
+    0 0 30px #00fff5,
+    0 0 40px #00fff5;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  user-select: none;
+  animation: glow-frase 1s ease infinite;
+  animation: move-frase 4s ease infinite;
+}
+
+@keyframes glow-frase {
+  0%, 100%{
+    text-shadow:
+    0 0 0px #00ffe7,
+    0 0 5px #00ffe7,
+    0 0 15px #00ffe7,
+    0 0 25px #00fff5,
+    0 0 35px #00fff5;
+  }
+  50%{text-shadow:
+    0 0 5px #00ffe7,
+    0 0 10px #00ffe7,
+    0 0 20px #00ffe7,
+    0 0 30px #00fff5,
+    0 0 40px #00fff5;
+  }
+}
+
+@keyframes move-frase {
+  0%, 100%{transform: translateY(0px);}
+  50%{transform: translateY(20px);}
+}
+
+#barra-deitada{
+    display: inline-block;
+    width: 20px;
+    height: 4px;
+    background-color: white;
+    vertical-align: bottom;
+    margin-left: 5px;
+    animation: piscar 1s step-start infinite;
+}
+
+@keyframes piscar {
+  50% { opacity: 0; }
+  0%, 100% { opacity: 1; }
+}
+
+#Sobre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Caixa-Sobre{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 80%;
+  height: 300px;
+  background-color: #0000006c;
+  border-radius: 20px;
+  box-shadow: #00ffe7 0px 0px 50px;
+  animation: anim-shadow-Caixa 2s ease infinite;
+}
+
+.Texto-Sobre{
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+}
+
+@keyframes anim-shadow-Caixa {
+  0%, 100%{box-shadow: #00ffe7 0px 0px 50px;}
+  50%{box-shadow: #00ffe7 0px 0px 100px;}
+}
+
+#Conteiner-Coffee{
+  float: right;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+}
+
+#Conteiner-Coffee img{
+  width: 80px;
+  height: 80px;
+}
+
+#Smoke{
+  animation: anim-Smoke 5s ease infinite;
+}
+
+@keyframes anim-Smoke {
+  0%, 100%{transform: translateY(0);}
+  50%{transform: translateY(-5px);}
+}
+
+#Projetos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+#Caixa-Projetos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 30%;
+  height: 200px;
+  background-color: #0000006c;
+  border-radius: 20px;
+  box-shadow: #00ffe7 0px 0px 50px;
+  animation: anim-shadow-Caixa 2s ease infinite;
+}
+
+#Conteiner-Image-Project{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  gap: 30px;
+}
+
+.Texto-Projetos{
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#Image-Seta-Project{
+  width: 70px;
+  height: 70px;
+  filter: brightness(0) invert(1);
+}
+
+#Image-Pasta-Project{
+  width: 200px;
+  height: 200px;
+  filter: drop-shadow(0px 0px 0px #000);
+  transition: filter 0.5s ease;
+}
+
+#Image-Pasta-Project:hover{
+  filter: drop-shadow(0px 0px 5px #00ffe7);
+}
+
+.Elements-Entry{
+  opacity: 0;
+  transform: translateX(50px) translateY(20px);
+  filter: blur(3px);
+  transition: all 2s ease;
+}
+
+.Elements-Entry.active{
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+  filter: blur(0);
+}
+
+#Habilidades{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Arvore{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  user-select: none;
+}
+
+#central{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  border-radius: 20px;
+  border: 2px solid #00ffe7;
+  background: linear-gradient(to bottom right, #272727, #0c0c0c);
+  box-shadow: 0px 0px 10px #00000080;
+}
+
+#interno-central{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  border: 2px solid #00ffe7;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 20px;
+}
+
+#interno-central img{
+  width: 95%;
+  filter: drop-shadow(0px 0px 5px #00ffe7);
+}
+
+#direita, #esquerda, #cima, #baixo{
+  background-color: transparent;
+}
+
+#direita{
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+  height: 40%;
+  top: 50%;
+  left: calc(50% + 35%);
+  transform: translate(-50%, -50%);
+}
+
+#esquerda{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 40%;
+  top: 50%;
+  left: calc(50% - 35%);
+  transform: translate(-50%, -50%);
+}
+
+#cima, #baixo {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+#cima{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+  top: calc(50% - 35%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#baixo{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+  top: calc(50% + 35%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bola{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(to bottom right, #272727, #0c0c0c);
+  border: 4px solid #00ffe7;
+  box-shadow: 0px 0px 10px #00ffe585;
+  border-radius: 50%;
+}
+
+.bola img{
+  width: 60%;
+}
+
+#Mensagem-Pop-up{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #00ffe7;
+}
+
+.linha{
+  position: absolute;
+  background-color: #00ffe7;
+  width: 4px;
+  height: 100%;
+  transform-origin: center;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+#linha-horizontal{
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#linha-vertical{
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#linha-diagonal-esquerda{
+  transform: translate(-50%, -50%) rotate(43deg);
+}
+
+#linha-diagonal-direita{
+  transform: translate(-50%, -50%) rotate(-43deg);
+}
